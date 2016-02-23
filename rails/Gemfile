@@ -1,0 +1,71 @@
+source 'https://rubygems.org'
+
+gem 'rails',                                        '~> 4.2.5'
+gem 'paperclip',                                    '~> 4.3.2'
+gem 'aws-sdk',                                      '< 2.0'
+
+# gem 'activeadmin', github: 'activeadmin'
+# gem 'active_skin'
+
+gem 'devise',                                       '~> 3.5.3'
+gem 'omniauth'
+gem 'omniauth-facebook',                            '~> 3.0.0'
+gem "omniauth-google-oauth2"
+
+gem 'coffee-rails',                                  '~> 4.1.0'
+gem 'font-awesome-rails',                            '~> 4.5.0.0'
+gem 'jbuilder',                                      '~> 2.3.2'
+gem 'jquery-rails',                                  '~> 4.0.5'
+gem 'sass-rails',                                    '~> 5.0.4'
+gem 'slim-rails' ,                                   '~> 3.0.1'
+gem 'js-routes',                                     '~> 1.2.3'
+gem 'turbolinks'
+
+gem 'puma',                                          '~> 2.15.3'
+gem 'pg',                                            '~> 0.18.4'
+
+gem 'simple_form',                                   '~> 3.2.0'
+# gem 'cancancan',                                   '~> 1.10'
+gem 'friendly_id',                                   '~> 5.1.0'
+gem 'cocoon'
+
+gem 'sdoc',                                          '~> 0.4.1', group: :doc
+gem 'therubyracer',                                  '~> 0.12.2'
+gem 'uglifier',                                      '~> 2.7.2'
+
+gem 'oj',                                            '~> 2.12.14'
+
+group :production do
+  gem 'rails_12factor'
+  gem 'rollbar',                                     '~> 1.2.7'
+end
+
+group :development do
+  gem 'letter_opener',                               '~> 1.4.1'
+  gem 'xray-rails',                                  '~> 0.1.17'
+  gem 'meta_request',                                '~> 0.3.4'
+  gem 'better_errors',                               '~> 2.1.1'
+  gem 'binding_of_caller',                           '~> 0.7.2'
+  gem 'web-console',                                 '~> 3.0.0'
+  gem 'brakeman', require: false
+  gem 'rails_best_practices'
+  gem 'rubycritic', require: false
+  gem 'rubocop', require: false
+end
+
+group :test do
+  gem 'simplecov',                                   '~> 0.11.1', require: false
+  gem 'rspec-rails',                                 '~> 3.4.0'
+  gem 'shoulda-matchers',                            '~> 3.0.1'
+  gem 'timecop',                                     '~> 0.8.0'
+  gem 'traceroute',                                  '~> 0.5.0'
+end
+
+group :development, :test do
+  gem 'factory_girl_rails',                          '~> 4.5.0'
+  gem 'pry-rails',                                   '~> 0.3.4'
+  gem 'byebug',                                      '~> 8.2.1'
+  gem 'spring',                                      '~> 1.6.0'
+  gem 'spring-commands-rspec',                       '~> 1.0.4'
+  gem 'bullet',                                      '~> 5.0.0'
+end

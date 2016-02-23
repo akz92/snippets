@@ -1,3 +1,3 @@
 # config/application.rb
 
-config.i18n.fallbacks =[:'pt-BR', :en, :it, :es]
+config.i18n.fallbacks =[:en, :'pt-BR', :it, :es]
