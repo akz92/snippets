@@ -1,0 +1,61 @@
+PreCommit:
+  # Style Check
+  RuboCop:
+    enabled: true
+    command: ['bundle', 'exec', 'rubocop', '-c', './.rubocop.yml']
+    on_warn: fail
+
+  RailsBestPractices:
+    enabled: true
+    on_warn: fail
+
+  LocalPathsInGemfile:
+    enabled: true
+    on_warn: fail
+
+  # Security Check
+  Brakeman:
+    enabled: true
+    command: ['bundle', 'exec', 'brakeman']
+
+  # Style Check in Slim
+  SlimLint:
+    enabled: true
+    command: ['bundle', 'exec', 'slim-lint', 'app/views/']
+
+  # YAML Check
+  YamlSyntax:
+    enabled: true
+    on_warn: fail
+
+  # Dependency Check
+  BundleCheck:
+    enabled: true
+    on_warn: fail
+
+  # Migration Check
+  RailsSchemaUpToDate:
+    enabled: true
+    on_warn: fail
+
+  # Checks for hard tabs in files
+  HardTabs:
+    enabled: true
+    on_warn: fail
+
+  # Checks for trailing whitespaces
+  TrailingWhiteSpace:
+    enabled: true
+    on_warn: fail
+
+
+PrePush:
+    # Unit & Integration TEST
+  RSpec:
+    enabled: true
+    command: ['bundle', 'exec', 'rspec', 'spec']
+    on_warn: fail
+
+  BundleInstall:
+    enabled: true
+    on_warn: fail
