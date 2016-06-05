@@ -1,0 +1,8 @@
+AllCops:
+  Excludes:
+    - db/schema.rb
+    - bin/setup
+Documentation:
+  Enabled: false
+Metrics/LineLength:
+  Max: 120
