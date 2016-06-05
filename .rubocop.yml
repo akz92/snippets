@@ -6,3 +6,6 @@ Documentation:
   Enabled: false
 Metrics/LineLength:
   Max: 120
+Lint:
+  BlockAlignment:
+    AlignWith: start_of_block
